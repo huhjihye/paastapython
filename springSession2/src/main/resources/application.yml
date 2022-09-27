@@ -1,0 +1,26 @@
+#Operation Mode
+spring:
+  profiles:
+    active: prod
+
+  #RedisDB Setting
+  redis:
+    host: 43.200.109.62
+    port: 6379
+    password: 1234
+
+  #Spring Session Setting
+  session:
+    store-type: redis
+    redis:
+      flush-mode: on_save
+      namespace: spring:flora
+
+#Server Setting
+server:
+  port: 26000
+
+#Session Time(sec)
+servlet:
+  session:
+    timeout: 600
